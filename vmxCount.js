@@ -1,6 +1,6 @@
 VMX.config.useMagicCanvas = true;
 VMX.callback = function(detections){
-  if (!mc = VMX.getMagicCanvas()){
+  if (! ( mc = VMX.getMagicCanvas() ) ){
     return; //canvas not open 
   };
   var modelName = detections[0].cls;
