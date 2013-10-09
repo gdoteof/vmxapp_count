@@ -1,5 +1,5 @@
 console.log("WTF");
-var MIN_CONFIDENCE = .5;
+var MIN_CONFIDENCE = 1;
 VMX.config.useMagicCanvas = true;
 VMX.storage.ledger = {}
 console.log("RE STARTING COUNTER");
