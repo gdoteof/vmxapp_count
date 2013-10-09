@@ -1,3 +1,4 @@
+var MIN_CONFIDENCE = .5;
 VMX.config.useMagicCanvas = true;
 VMX.callback = function(detections){
   if (! ( mc = VMX.getMagicCanvas() ) ){
