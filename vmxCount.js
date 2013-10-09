@@ -1,3 +1,4 @@
+console.log("WTF");
 var MIN_CONFIDENCE = .5;
 VMX.config.useMagicCanvas = true;
 VMX.storage.ledger = {}
