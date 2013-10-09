@@ -26,7 +26,7 @@ VMX.callback = function(detections){
   var output =[];
   for (var name in VMX.storage.ledger){
     line = name + ': ' + VMX.storage.ledger[name] + "\n";
-    mcc.fillText(line,  0, y)
+    mcc.fillText(line,  50, y)
     y += 50;
     output.push(line);
   }
