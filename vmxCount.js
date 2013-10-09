@@ -10,6 +10,8 @@ VMX.callback = function(detections){
   };
   var modelName = detections[0].cls;
   var mcc = mc.getContext('2d');
+  mcc.clearRect(0,0,mcc.width,mcc.height);
+  mcc.restore();
 
   for(var x in detections){
     if(detections[x].score > MIN_CONFIDENCE){
