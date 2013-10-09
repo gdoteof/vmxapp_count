@@ -19,8 +19,7 @@ VMX.callback = function(detections){
     }
   }
 
-  console.log("abotu to clear");
-  mcc.clearRect(0,0,mcc.width,mcc.height);
+  console.log("the context", mcc);
   mcc.fillStyle = "blue";
   mcc.font = "bold 16px Arial";
   var coords = {x: 50, y:50};
