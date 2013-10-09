@@ -10,8 +10,6 @@ VMX.callback = function(detections){
   if(!mcc) return;
 
   var modelName = detections[0].cls;
-  mcc.clearRect(0,0,1000,1000);
-  mcc.restore();
   console.log(mcc);
   console.log(mc);
 
