@@ -13,6 +13,7 @@ VMX.callback = function(detections){
   mcc.clearRect(0,0,mc.width,mc.height);
   mcc.restore();
   console.log(mcc);
+  console.log(mc);
 
   for(var x in detections){
     if(detections[x].score > MIN_CONFIDENCE){
