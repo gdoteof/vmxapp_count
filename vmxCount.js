@@ -22,18 +22,18 @@ VMX.callback = function(detections){
   mcc.clearRect(0,0,mcc.width,mcc.height);
   mcc.fillStyle = "blue";
   mcc.font = "bold 16px Arial";
-  var y = 0;
+  var coords = {x: 50, y:50};
   var output =[];
   for (var name in VMX.storage.ledger){
     line = name + ': ' + VMX.storage.ledger[name] + "\n";
-    mcc.fillText(line,  50, y)
-    y += 50;
+    mcc.fillText(line,  coords.x, coords.y)
+    coords.y += 50;
     output.push(line);
   }
 
   mcc.fillText(output, 100, 100)
 
   console.log(VMX.storage.ledger);
-  console.log(output);
+  console.log(coords,output);
 }
  
