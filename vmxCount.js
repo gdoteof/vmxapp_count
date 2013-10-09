@@ -1,15 +1,15 @@
-console.log("WTF");
 var MIN_CONFIDENCE = 1;
 VMX.config.useMagicCanvas = true;
 VMX.storage.ledger = {}
-console.log("RE STARTING COUNTER");
 
 VMX.callback = function(detections){
   if (! ( mc = VMX.getMagicCanvas() ) ){
     return; //canvas not open 
   };
-  var modelName = detections[0].cls;
   var mcc = VMX.getMagicContext();
+  if(!mcc) return;
+
+  var modelName = detections[0].cls;
   mcc.clearRect(0,0,1000,1000);
   mcc.restore();
   console.log(mcc);
