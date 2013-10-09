@@ -10,7 +10,7 @@ VMX.callback = function(detections){
   var modelName = detections[0].cls;
 
   var mcc = mc.getContext('2d');
-  console.log(VMX);
+  console.log("VMX..",VMX);
 
   for(var x in detections){
     if(detections[x].score > MIN_CONFIDENCE){
