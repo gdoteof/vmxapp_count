@@ -9,12 +9,11 @@ VMX.callback = function(detections){
     return; //canvas not open 
   };
   var modelName = detections[0].cls;
-  var mcc = mc.getContext('2d');
-  mcc.clearRect(0,0,mc.width,mc.height);
+  var mcc = VMX.getMagicContext();
+  mcc.clearRect(0,0,1000,1000);
   mcc.restore();
   console.log(mcc);
   console.log(mc);
-  console.log("canvas width is ", mc.width);
 
   for(var x in detections){
     if(detections[x].score > MIN_CONFIDENCE){
