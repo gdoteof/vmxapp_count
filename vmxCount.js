@@ -21,12 +21,13 @@ VMX.callback = function(detections){
 
   var output = '';
   for (var name in VMX.storage.ledger){
-    output += name + ': ' + VMX.storage.ledger[name] + "\n";
+    output += name + ': ' + VMX.storage.ledger[name] + "\n</br>";
   }
 
- mcc.fillStyle = "blue";
- mcc.font = "bold 16px Arial";
- mcc.fillText(output, 100, 100)
+  mcc.clearRect(0,0,mcc.width,mcc.height);
+  mcc.fillStyle = "blue";
+  mcc.font = "bold 16px Arial";
+  mcc.fillText(output, 100, 100)
 
   console.log(VMX.storage.ledger);
   console.log(output);
