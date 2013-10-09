@@ -7,8 +7,11 @@ VMX.callback = function(detections){
     return; //canvas not open 
   };
   var mcc = VMX.getMagicContext();
-  mcc.clearRect(0,0,mc.width,mc.height);
   if(!mcc) return;
+
+  mcc.restore();
+  mcc.clearRect(0,0,mc.width,mc.height);
+  mc.width = mc.width;
 
   var modelName = detections[0].cls;
 
@@ -20,7 +23,6 @@ VMX.callback = function(detections){
     }
   }
 
-  console.log("the context", mcc);
   mcc.fillStyle = "blue";
   mcc.font = "bold 16px Arial";
   var coords = {x: 50, y:50};
@@ -33,7 +35,6 @@ VMX.callback = function(detections){
   }
 
   mcc.fillText(output, 100, 100)
-  mcc.restore();
 
   console.log(VMX.storage.ledger);
   console.log(coords,output);
