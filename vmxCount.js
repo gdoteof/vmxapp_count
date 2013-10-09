@@ -7,6 +7,7 @@ VMX.callback = function(detections){
     return; //canvas not open 
   };
   var mcc = VMX.getMagicContext();
+  mcc.clearRect(0,0,mc.width,mc.height);
   if(!mcc) return;
 
   var modelName = detections[0].cls;
