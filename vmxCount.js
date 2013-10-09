@@ -32,6 +32,7 @@ VMX.callback = function(detections){
   }
 
   mcc.fillText(output, 100, 100)
+  mcc.restore();
 
   console.log(VMX.storage.ledger);
   console.log(coords,output);
