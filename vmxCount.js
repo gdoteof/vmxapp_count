@@ -10,8 +10,6 @@ VMX.callback = function(detections){
   if(!mcc) return;
 
   var modelName = detections[0].cls;
-  console.log(mcc);
-  console.log(mc);
 
   for(var x in detections){
     if(detections[x].score > MIN_CONFIDENCE){
@@ -21,6 +19,7 @@ VMX.callback = function(detections){
     }
   }
 
+  console.log("abotu to clear");
   mcc.clearRect(0,0,mcc.width,mcc.height);
   mcc.fillStyle = "blue";
   mcc.font = "bold 16px Arial";
