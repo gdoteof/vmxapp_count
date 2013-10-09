@@ -23,10 +23,12 @@ VMX.callback = function(detections){
   mcc.fillStyle = "blue";
   mcc.font = "bold 16px Arial";
   var y = 0;
+  var output =[];
   for (var name in VMX.storage.ledger){
     line = name + ': ' + VMX.storage.ledger[name] + "\n";
     mcc.fillText(line,  0, y)
     y += 50;
+    output.push(line);
   }
 
   mcc.fillText(output, 100, 100)
