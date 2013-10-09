@@ -13,7 +13,7 @@ VMX.callback = function(detections){
 
   for(var x in detections){
     if(detections[x].score > MIN_CONFIDENCE){
-      VMX.storage.ledger[modelName] = (x+1);
+      VMX.storage.ledger[modelName] = parseInt(x,10) + 1;
     } else {
       break;
     }
