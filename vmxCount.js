@@ -19,6 +19,16 @@ VMX.callback = function(detections){
     }
   }
 
+  var output = '';
+  for (var name in VMX.storage.ledger){
+    output += name + ': ' + VMX.storage.ledger[name] + "\n";
+  }
+
+ mcc.fillStyle = "blue";
+ mcc.font = "bold 16px Arial";
+ mcc.fillText(output, 100, 100)
+
   console.log(VMX.storage.ledger);
+  console.log(output);
 }
  
