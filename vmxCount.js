@@ -14,7 +14,7 @@ VMX.callback = function(detections){
   mcc.restore();
   console.log(mcc);
   console.log(mc);
-  cnsole.log("canvas width is ", mc.width);
+  console.log("canvas width is ", mc.width);
 
   for(var x in detections){
     if(detections[x].score > MIN_CONFIDENCE){
