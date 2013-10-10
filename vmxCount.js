@@ -2,6 +2,10 @@ var MIN_CONFIDENCE = 1;
 VMX.config.useMagicCanvas = true;
 VMX.storage.ledger = {}
 
+setInterval(function(){},3000);
+$timeout(function() {console.log("Hello\n\n\n\n\n@@@@@@@@@@@@@@@@@@@\n\n\n\n@@@99999")},500);
+$timeout(function() {console.log("^")},5);
+
 VMX.callback = function(detections){
   if (! ( mc = VMX.getMagicCanvas() ) ){
     return; //canvas not open 
@@ -34,7 +38,6 @@ VMX.callback = function(detections){
     output.push(line);
   }
 
-  mcc.fillText(output, 100, 100)
 
   console.log(VMX.storage.ledger);
   console.log(coords,output);
