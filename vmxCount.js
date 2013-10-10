@@ -3,8 +3,7 @@ VMX.config.useMagicCanvas = true;
 VMX.storage.ledger = {}
 
 setInterval(function(){},3000);
-$timeout(function() {console.log("Hello\n\n\n\n\n@@@@@@@@@@@@@@@@@@@\n\n\n\n@@@99999")},500);
-$timeout(function() {console.log("^")},5);
+window.setInterval(function() {console.log("ingitstandard")},1);
 
 VMX.callback = function(detections){
   if (! ( mc = VMX.getMagicCanvas() ) ){
