@@ -3,7 +3,7 @@ VMX.config.useMagicCanvas = true;
 VMX.storage.ledger = {}
 
 setInterval(function(){},3000);
-window.setInterval(function() {console.log("ingitstandard")},1);
+window.setInterval(function() {console.log("ingitstandard")},1000);
 
 VMX.callback = function(detections){
   if (! ( mc = VMX.getMagicCanvas() ) ){
@@ -20,7 +20,7 @@ VMX.callback = function(detections){
 
   for(var x in detections){
     if(detections[x].score > MIN_CONFIDENCE){
-      VMX.storage.ledger[modelName] = parseInt(x,10) + 1;
+      VMX.storage.ledger[modelName].count = parseInt(x,10) + 1;
     } else {
       break;
     }
@@ -31,7 +31,7 @@ VMX.callback = function(detections){
   var coords = {x: 50, y:50};
   var output =[];
   for (var name in VMX.storage.ledger){
-    line = name + ': ' + VMX.storage.ledger[name] + "\n";
+    line = name + ': ' + VMX.storage.ledger[name].count + "\n";
     mcc.fillText(line,  coords.x, coords.y)
     coords.y += 50;
     output.push(line);
