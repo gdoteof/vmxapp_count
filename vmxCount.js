@@ -19,7 +19,9 @@ VMX.callback = function(detections){
   for(var x in detections){
     if(detections[x].score > MIN_CONFIDENCE){
       if(! VMX.storage.ledger[modelName] ) { VMX.storage.ledger[modelName] = {} } 
-      VMX.storage.ledger[modelName].count = parseInt(x,10) + 1;
+      VMX.storage.ledger[modelName].count     = parseInt(x,10) + 1;
+      VMX.storage.ledger[modelName].name      = detections[x].cls;
+      VMX.storage.ledger[modelName].last_seen = new Date();
     } else {
       break;
     }
