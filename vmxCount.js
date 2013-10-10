@@ -3,7 +3,9 @@ VMX.config.useMagicCanvas = true;
 VMX.storage.ledger = {}
 
 
+
 VMX.callback = function(detections){
+  var vmxParams = vmxparams.list_detect_params();
   if (! ( mc = VMX.getMagicCanvas() ) ){
     return; //canvas not open 
   };
@@ -36,7 +38,7 @@ VMX.callback = function(detections){
     output.push(line);
   }
 
-  console.log(vmxparams);
+  console.log(vmxParams);
 
 
   //console.log(VMX.storage.ledger);
