@@ -32,10 +32,12 @@ VMX.callback = function(detections){
   var coords = {x: 50, y:50};
   var output =[];
   for (var name in VMX.storage.ledger){
-    line = name + ': ' + VMX.storage.ledger[name].count + "\n";
-    mcc.fillText(line,  coords.x, coords.y)
-    coords.y += 30;
-    output.push(line);
+      if(parseInt(VMX.storage.ledger[name].count)>0){
+        line = name + ': ' + VMX.storage.ledger[name].count + "\n";
+        mcc.fillText(line,  coords.x, coords.y)
+        coords.y += 30;
+        output.push(line);
+    }
   }
 
 
