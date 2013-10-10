@@ -2,7 +2,6 @@ var MIN_CONFIDENCE = 1;
 VMX.config.useMagicCanvas = true;
 VMX.storage.ledger = {}
 
-setInterval(function(){},3000);
 window.setInterval(function() {console.log("ingitstandard")},1000);
 
 VMX.callback = function(detections){
