@@ -1,4 +1,5 @@
 console.log("ontopofcount");
+vmxparams.list_detect_params()[
 VMX.cron = function(){
   var now = new Date();
 

@@ -38,7 +38,7 @@ VMX.callback = function(detections){
     output.push(line);
   }
 
-  console.log(vmxParams);
+  console.log(vmxparams.list_ui_params());
 
 
   //console.log(VMX.storage.ledger);
