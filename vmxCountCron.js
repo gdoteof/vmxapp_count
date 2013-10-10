@@ -6,7 +6,8 @@ VMX.cron = function(){
     model = VMX.storage.ledger[m];
     var diff = now - model.last_seen;
     console.log("its been ", diff, "since we've seen", model.name);
-    if(now - model.last_seen > 2000){
+    if(diff > 2000){
+      console.log("BANISH"); 
       delete VMX.storage.ledger[model];
     }
   }
