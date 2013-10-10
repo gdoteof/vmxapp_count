@@ -10,9 +10,7 @@ VMX.callback = function(detections){
   var mcc = VMX.getMagicContext();
   if(!mcc) return;
 
-  mcc.restore();
   mcc.clearRect(0,0,mc.width,mc.height);
-  mc.width = mc.width;
 
   var modelName = detections[0].cls;
 
@@ -28,13 +26,13 @@ VMX.callback = function(detections){
   }
 
   mcc.fillStyle = "blue";
-  mcc.font = "bold 16px Arial";
+  mcc.font = "bold 12px Arial";
   var coords = {x: 50, y:50};
   var output =[];
   for (var name in VMX.storage.ledger){
     line = name + ': ' + VMX.storage.ledger[name].count + "\n";
     mcc.fillText(line,  coords.x, coords.y)
-    coords.y += 50;
+    coords.y += 30;
     output.push(line);
   }
 
