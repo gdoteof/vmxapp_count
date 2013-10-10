@@ -19,6 +19,7 @@ VMX.callback = function(detections){
 
   for(var x in detections){
     if(detections[x].score > MIN_CONFIDENCE){
+      if(! VMX.storage.ledger[modelName] ) { VMX.storage.ledger[modelName] = {} } 
       VMX.storage.ledger[modelName].count = parseInt(x,10) + 1;
     } else {
       break;
