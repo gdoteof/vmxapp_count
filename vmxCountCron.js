@@ -14,7 +14,7 @@ VMX.cron = function(){
   for(var m in VMX.storage.ledger){
     model = VMX.storage.ledger[m];
     var diff = now - model.last_seen;
-    if(diff > 1000){
+    if(diff > 2000){
       VMX.storage.ledger[m].count = 0;
     }
   }
