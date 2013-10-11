@@ -1,5 +1,6 @@
 console.log("ontopofcount");
 //Set params
+console.log(vmxparams.list_ui_params());
 vmxparams.list_ui_params()[0].value=1000;
 vmxparams.list_ui_params()[0].current_value=1000;
 vmxparams.list_ui_params()[2].value=0;
