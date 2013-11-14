@@ -5,7 +5,6 @@ VMX.storage.ledger = {}
 
 
 VMX.callback = function(detections){
-  var vmxParams = vmxparams.list_detect_params();
   if (! ( mc = VMX.getMagicCanvas() ) ){
     return; //canvas not open 
   };
